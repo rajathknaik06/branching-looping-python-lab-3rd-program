@@ -1,0 +1,31 @@
+""" Ethan, a curious mathematician, is fascinated by perfect numbers. A perfect number is a number that equals the sum of its proper divisors (excluding itself). Ethan wants to identify all perfect numbers within a given range. 
+
+
+
+Help him write a program to list these numbers.
+
+Input format :
+The first line of input consists of an integer start, representing the starting number of the range.
+
+The second line consists of an integer end, representing the ending number of the range.
+
+Output format :
+The output prints all perfect numbers in the range, separated by a space.
+
+"""
+start = int(input())
+end = int(input())
+for num in range(start, end+1):
+    sum_of_divisors = 0
+    for i in range (1, num):
+        if num % i == 0:
+            sum_of_divisors += i
+    if sum_of_divisors == num:
+        print(num, end=" ")       #print on the same line separted by space
+    else:
+        pass
+    
+    
+    """ perfect number = positive number and sum of its proper divisor
+    6 = 1 + 2 + 3
+    """
